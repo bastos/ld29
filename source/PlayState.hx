@@ -179,7 +179,7 @@ class PlayState extends FlxState
     // Dummy...
     new FlxTimer(2.0, addBird, 1);
 
-    new FlxTimer(3.0, addAirplane, 0);
+    new FlxTimer(2.0, addAirplane, 0);
     // Dummy...
     new FlxTimer(2.0, addAirplane, 1);
     FlxG.sound.playMusic("assets/music/nosubs.wav");
@@ -295,7 +295,7 @@ class PlayState extends FlxState
     }
 
     // Roll the dice
-    if (FlxRandom.chanceRoll(10 * (_deadc + 1)))
+    if (FlxRandom.chanceRoll(12 * (_deadc + 1)))
     {
       new FlxTimer(FlxRandom.intRanged(2, 5), addAirplane, FlxRandom.intRanged(1, 1+_deadc));
     }
